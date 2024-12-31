@@ -1,0 +1,18 @@
+{% extends "layout.html" %}  <!-- 繼承基礎模板 layout.html，使用其結構和通用部分 -->
+
+{% block content %}  <!-- 定義一個名為 content 的區塊，用來覆蓋基礎模板中的對應區域 -->
+
+    {% for post in posts %}  <!-- 使用 Jinja2 的 for 迴圈遍歷 posts 列表，逐一處理每篇文章 -->
+        <article class="media content-section">  <!-- 定義一個文章區塊，使用 Bootstrap 的 media 和 content-section 類別進行樣式設計 -->
+          <div class="media-body">  <!-- 文章的主要內容區域 -->
+            <div class="article-metadata">  <!-- 顯示文章的元數據區域，包括作者和發佈日期 -->
+              <a class="mr-2" href="#">{{ post.author }}</a>  <!-- 動態顯示文章的作者名稱，href="#" 是連結占位符 -->
+              <small class="text-muted">{{ post.date_posted }}</small>  <!-- 動態顯示文章的發佈日期，樣式為淡灰色 -->
+            </div>
+            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>  <!-- 動態顯示文章的標題，href="#" 是連結占位符 -->
+            <p class="article-content">{{ post.content }}</p>  <!-- 動態顯示文章的內容 -->
+          </div>
+        </article>
+    {% endfor %}  <!-- 結束 Jinja2 的 for 迴圈，所有文章已完成渲染 -->
+
+{% endblock content %}  

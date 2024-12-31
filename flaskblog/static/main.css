@@ -1,0 +1,81 @@
+body {
+    background: #fafafa; /* 設定頁面背景顏色為淺灰色 */
+    color: #333333; /* 設定全域文字顏色為深灰色 */
+    margin-top: 5rem; /* 頁面上方外距設為 5rem，讓內容與頁面頂端有間距 */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #444444; /* 設定標題 (h1 ~ h6) 的文字顏色為稍淺的深灰色 */
+  }
+  
+  .bg-steel {
+    background-color: #5f788a; /* 定義一個名為 bg-steel 的背景顏色為鋼藍色 */
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db; /* 導覽列連結文字顏色設為灰藍色 */
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff; /* 當滑鼠懸停在導覽列連結上時，文字顏色變為白色 */
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500; /* 導覽列中處於活動狀態的連結字體加粗 */
+  }
+  
+  .content-section {
+    background: #ffffff; /* 內容區背景顏色設為白色 */
+    padding: 10px 20px; /* 內部邊距為上下 10px，左右 20px */
+    border: 1px solid #dddddd; /* 外框顏色設為淺灰色 */
+    border-radius: 3px; /* 外框圓角半徑為 3px */
+    margin-bottom: 20px; /* 底部外距設為 20px，分隔內容區 */
+  }
+  
+  .article-title {
+    color: #444444; /* 文章標題文字顏色設為稍淺的深灰色 */
+  }
+  
+  a.article-title:hover {
+    color: #428bca; /* 當滑鼠懸停在文章標題連結上時，文字顏色變為藍色 */
+    text-decoration: none; /* 移除文字裝飾線 */
+  }
+  
+  .article-content {
+    white-space: pre-line; /* 保留文字中的換行符號，並自動換行 */
+  }
+  
+  .article-img {
+    height: 65px; /* 設定文章圖片的高度為 65px */
+    width: 65px; /* 設定文章圖片的寬度為 65px */
+    margin-right: 16px; /* 設定圖片右側外距為 16px，與文字間距 */
+  }
+  
+  .article-metadata {
+    padding-bottom: 1px; /* 底部內距設為 1px */
+    margin-bottom: 4px; /* 底部外距設為 4px */
+    border-bottom: 1px solid #e3e3e3; /* 底部邊框顏色設為更淺的灰色 */
+  }
+  
+  .article-metadata a:hover {
+    color: #333; /* 當滑鼠懸停在數據連結上時，文字顏色變為深灰色 */
+    text-decoration: none; /* 移除文字裝飾線 */
+  }
+  
+  .article-svg {
+    width: 25px; /* 設定圖片的寬度為 25px */
+    height: 25px; /* 設定圖片的高度為 25px */
+    vertical-align: middle; /* 使圖片垂直置中 */
+  }
+  
+  .account-img {
+    height: 125px; /* 使用者帳戶圖片高度設為 125px */
+    width: 125px; /* 使用者帳戶圖片寬度設為 125px */
+    margin-right: 20px; /* 設定右側外距為 20px */
+    margin-bottom: 16px; /* 設定底部外距為 16px */
+  }
+  
+  .account-heading {
+    font-size: 2.5rem; /* 帳戶標題字體大小設為 2.5rem */
+  }
+  

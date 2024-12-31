@@ -1,0 +1,78 @@
+{% extends "layout.html" %} 
+
+{% block content %}  
+    <div class="content-section">  <!-- 表單的內容區域 -->
+        <form method="POST" action="">  <!-- 定義表單，使用 POST 方法提交，action 默認為當前頁面 -->
+            {{ form.hidden_tag() }}  
+            <fieldset class="form-group">  <!-- 群組相關表單欄位 -->
+                <legend class="border-bottom mb-4">Join Today</legend>  <!-- 表單標題 -->
+
+                <div class="form-group">  <!-- 使用者名稱欄位 -->
+                    {{ form.username.label(class="form-control-label") }}  <!-- 顯示使用者名稱欄位的標籤 -->
+                    {% if form.username.errors %}  <!-- 檢查使用者名稱欄位是否有錯誤 -->
+                        {{ form.username(class="form-control form-control-lg is-invalid") }}  <!-- 如果有錯誤，添加 is-invalid 樣式 -->
+                        <div class="invalid-feedback">  <!-- 顯示錯誤訊息 -->
+                            {% for error in form.username.errors %}  <!-- 遍歷所有錯誤訊息 -->
+                                <span>{{ error }}</span>  <!-- 顯示每個錯誤訊息 -->
+                            {% endfor %}
+                        </div>
+                    {% else %}  <!-- 如果沒有錯誤 -->
+                        {{ form.username(class="form-control form-control-lg") }}  <!-- 正常渲染使用者名稱欄位 -->
+                    {% endif %}
+                </div>
+
+                <div class="form-group">  <!-- 電子郵件欄位 -->
+                    {{ form.email.label(class="form-control-label") }}  <!-- 顯示電子郵件欄位的標籤 -->
+                    {% if form.email.errors %}  <!-- 檢查電子郵件欄位是否有錯誤 -->
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}  <!-- 如果有錯誤，添加 is-invalid 樣式 -->
+                        <div class="invalid-feedback">  <!-- 顯示錯誤訊息 -->
+                            {% for error in form.email.errors %}  <!-- 遍歷所有錯誤訊息 -->
+                                <span>{{ error }}</span>  <!-- 顯示每個錯誤訊息 -->
+                            {% endfor %}
+                        </div>
+                    {% else %}  <!-- 如果沒有錯誤 -->
+                        {{ form.email(class="form-control form-control-lg") }}  <!-- 正常渲染電子郵件欄位 -->
+                    {% endif %}
+                </div>
+
+                <div class="form-group">  <!-- 密碼欄位 -->
+                    {{ form.password.label(class="form-control-label") }}  <!-- 顯示密碼欄位的標籤 -->
+                    {% if form.password.errors %}  <!-- 檢查密碼欄位是否有錯誤 -->
+                        {{ form.password(class="form-control form-control-lg is-invalid") }}  <!-- 如果有錯誤，添加 is-invalid 樣式 -->
+                        <div class="invalid-feedback">  <!-- 顯示錯誤訊息 -->
+                            {% for error in form.password.errors %}  <!-- 遍歷所有錯誤訊息 -->
+                                <span>{{ error }}</span>  <!-- 顯示每個錯誤訊息 -->
+                            {% endfor %}
+                        </div>
+                    {% else %}  <!-- 如果沒有錯誤 -->
+                        {{ form.password(class="form-control form-control-lg") }}  <!-- 正常渲染密碼欄位 -->
+                    {% endif %}
+                </div>
+
+                <div class="form-group">  <!-- 確認密碼欄位 -->
+                    {{ form.confirm_password.label(class="form-control-label") }}  <!-- 顯示確認密碼欄位的標籤 -->
+                    {% if form.confirm_password.errors %}  <!-- 檢查確認密碼欄位是否有錯誤 -->
+                        {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}  <!-- 如果有錯誤，添加 is-invalid 樣式 -->
+                        <div class="invalid-feedback">  <!-- 顯示錯誤訊息 -->
+                            {% for error in form.confirm_password.errors %}  <!-- 遍歷所有錯誤訊息 -->
+                                <span>{{ error }}</span>  <!-- 顯示每個錯誤訊息 -->
+                            {% endfor %}
+                        </div>
+                    {% else %}  <!-- 如果沒有錯誤 -->
+                        {{ form.confirm_password(class="form-control form-control-lg") }}  <!-- 正常渲染確認密碼欄位 -->
+                    {% endif %}
+                </div>
+            </fieldset>
+
+            <div class="form-group">  <!-- 提交按鈕 -->
+                {{ form.submit(class="btn btn-outline-info") }}  <!-- 渲染提交按鈕，樣式為 Bootstrap 的按鈕 -->
+            </div>
+        </form>
+    </div>
+
+    <div class="border-top pt-3">  <!-- 表單底部的分隔線和附加資訊 -->
+        <small class="text-muted">  <!-- 顯示登入連結 -->
+            Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>  <!-- 登入頁面的連結 -->
+        </small>
+    </div>
+{% endblock content %}  
